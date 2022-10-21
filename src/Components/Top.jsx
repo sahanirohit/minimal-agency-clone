@@ -1,10 +1,31 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function Top() {
   const [search, setSearch] = useState(false);
+  const [dark, setDark] = useState(true);
+  const [top, setTop] = useState(false);
+  const htmlObject = document.querySelector("html");
+
+  const handleDark = () => {
+    if (dark) {
+      htmlObject.classList.remove("dark");
+    } else {
+      htmlObject.classList.add("dark");
+    }
+  };
+
+  useEffect(() => {
+    handleDark();
+    window.addEventListener("scroll", () => {
+      window.scrollY > 60 ? setTop(true) : setTop(false);
+    });
+  });
 
   return (
-    <div className="lg:px-48 px-6 py-4">
+    <div
+      className={`lg:px-48 px-6 py-4 dark:bg-gray-900 dark:text-gray-100 ${
+        top ? "hidden" : ""
+      }`}>
       <div className="flex items-center justify-between">
         <div className="flex space-x-6 text-sm">
           <div className="flex space-x-2 items-center">
@@ -24,8 +45,11 @@ function Top() {
           <i
             onClick={() => setSearch(!search)}
             className="fa-solid cursor-pointer fa-search"></i>
-          <i className="fa-solid fa-moon px-8"></i>
-          {/* <i class="fa-solid fa-sun-bright"></i> */}
+          <i
+            onClick={() => setDark(!dark)}
+            className={`${
+              dark ? "fa-moon text-black" : "fa-sun text-gray-100"
+            } fa-solid  px-8 cursor-pointer`}></i>
         </div>
       </div>
       {/* <div className="bg-black w-full h-[0.5px] mt-2"></div> */}
