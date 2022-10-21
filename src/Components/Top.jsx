@@ -4,9 +4,9 @@ function Top() {
   const [search, setSearch] = useState(false);
 
   return (
-    <div className="lg:px-48 px-6 py-3">
+    <div className="lg:px-48 px-6 py-4">
       <div className="flex items-center justify-between">
-        <div className="flex space-x-6">
+        <div className="flex space-x-6 text-sm">
           <div className="flex space-x-2 items-center">
             <i className="fa-solid fa-envelope"></i>
             <span className="">email@companyname.com</span>
@@ -21,10 +21,30 @@ function Top() {
           <i className="fa-brands cursor-pointer fa-instagram"></i>
           <i className="fa-brands cursor-pointer fa-twitter"></i>
           <i className="fa-brands cursor-pointer fa-pinterest"></i>
-          <i className="fa-solid cursor-pointer fa-search"></i>
+          <i
+            onClick={() => setSearch(!search)}
+            className="fa-solid cursor-pointer fa-search"></i>
+          <i className="fa-solid fa-moon px-8"></i>
+          {/* <i class="fa-solid fa-sun-bright"></i> */}
         </div>
       </div>
-      <div className="bg-white w-full h-[0.5px] mt-2"></div>
+      {/* <div className="bg-black w-full h-[0.5px] mt-2"></div> */}
+      <hr className="bg-black w-full mt-3" />
+      <div
+        className={`${
+          search
+            ? "fixed w-full h-full flex items-center justify-center bg-white inset-0"
+            : "hidden"
+        }`}>
+        <i
+          onClick={() => setSearch(!search)}
+          className="fa-solid absolute top-4 z-50 text-black text-xl right-6 cursor-pointer fa-xmark"></i>
+        <input
+          type="text"
+          className="px-4 py-4 bg-transparent text-gray-800 border border-gray-300 focus:outline-none rounded-xl w-[50%]"
+          placeholder="Search..."
+        />
+      </div>
     </div>
   );
 }
