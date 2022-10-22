@@ -17,7 +17,7 @@ function Top() {
   useEffect(() => {
     handleDark();
     window.addEventListener("scroll", () => {
-      window.scrollY > 60 ? setTop(true) : setTop(false);
+      window.scrollY > 20 ? setTop(true) : setTop(false);
     });
   });
 

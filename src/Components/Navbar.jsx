@@ -8,7 +8,7 @@ function Navbar() {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      window.scrollY > 60 ? setNav(true) : setNav(false);
+      window.scrollY > 20 ? setNav(true) : setNav(false);
     });
   });
   return (
@@ -23,7 +23,7 @@ function Navbar() {
 
         {/* Desktop Nav */}
         <ul className="flex">
-          <li className="px-6 py-2 cursor-pointer">
+          <li className="px-6 py-2 cursor-pointer active">
             <Link to={"/"}>Home</Link>
           </li>
           <li className="px-6 py-2 cursor-pointer">
@@ -41,7 +41,7 @@ function Navbar() {
           <li className="px-6 py-2 cursor-pointer">
             <Link to={"/testimonials"}>Testimonials</Link>
           </li>
-          <button className="px-6 py-2 font-semibold bg-blue-400 rounded-md">
+          <button className="px-6 py-2 font-semibold hover:bg-blue-600 duration-200 bg-blue-400 rounded-md">
             Contact
           </button>
         </ul>
