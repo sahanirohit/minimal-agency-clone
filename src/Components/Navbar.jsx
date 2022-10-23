@@ -8,7 +8,7 @@ function Navbar() {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      window.scrollY > 60 ? setNav(true) : setNav(false);
+      window.scrollY > 20 ? setNav(true) : setNav(false);
     });
   });
   return (
