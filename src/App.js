@@ -2,6 +2,9 @@ import Navbar from "./Components/Navbar";
 import Top from "./Components/Top";
 import Hero from "./Components/Hero.jsx";
 import "./index.css";
+import WhyUs from "./Components/WhyUs";
+import About from "./Components/About";
+import Why from "./Components/Why";
 
 function App() {
   return (
@@ -9,7 +12,9 @@ function App() {
       <Top />
       <Navbar />
       <Hero />
-      <div className="">Hello</div>
+      <WhyUs />
+      <About />
+      <Why />
       <div className="h-[2000px]"></div>
     </div>
   );

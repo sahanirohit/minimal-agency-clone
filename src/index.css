@@ -7,3 +7,12 @@
     @apply bg-gray-100 dark:bg-gray-900;
   }
 }
+
+@layer components {
+  .why-us-icon {
+    @apply w-16 h-16 bg-sky-100 rounded-full flex items-center justify-center text-2xl text-blue-600;
+  }
+  .active {
+    @apply text-blue-600;
+  }
+}
