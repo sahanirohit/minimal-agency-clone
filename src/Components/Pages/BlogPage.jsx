@@ -11,11 +11,13 @@ function BlogPage() {
           {blogData.map((item, index) => {
             return (
               <div className="" key={index}>
-                <img
-                  src={item.img}
-                  alt=""
-                  className="w-full h-full object-cover"
-                />
+                <div className="w-full h-[420px]">
+                  <img
+                    src={item.img}
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <div className="py-12">
                   <div className="flex items-center space-x-4 text-gray-600 ">
                     <span className="">{item.industry}</span>

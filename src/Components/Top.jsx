@@ -24,7 +24,7 @@ function Top() {
   return (
     <div
       className={`lg:px-48 px-6 py-4 dark:bg-gray-900 dark:text-gray-100 ${
-        top ? "hidden" : ""
+        top === true && search === false ? "hidden" : ""
       }`}>
       <div className="flex items-center justify-between">
         <div className="flex space-x-6 text-sm">
@@ -57,7 +57,7 @@ function Top() {
       <div
         className={`${
           search
-            ? "fixed w-full h-full flex items-center justify-center bg-white inset-0"
+            ? "fixed w-full h-full z-50 flex items-center justify-center bg-white inset-0"
             : "hidden"
         }`}>
         <i

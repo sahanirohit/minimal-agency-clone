@@ -5,7 +5,7 @@ function Contact() {
     <section className="lg:px-48 px-6 py-20">
       <div className="">
         <div className="grid grid-cols-2 gap-16">
-          <div className="flex flex-col space-y-10">
+          <div className="flex flex-col justify-center space-y-10">
             <div className="flex flex-col space-y-3">
               <p className=" text-blue-600">Contact</p>
               <h2 className=" text-3xl font-semibold">Get In Touch ✋</h2>
@@ -50,7 +50,58 @@ function Contact() {
               </div>
             </div>
           </div>
-          <div className="">World</div>
+          <div className="bg-blue-100/60 px-8 py-12">
+            <form className="">
+              <div className="flex flex-col space-y-8">
+                <div className="flex flex-col space-y-2">
+                  <label htmlFor="fname" className="text-lg">
+                    Full Name
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Full Name"
+                    className="px-6 py-3.5 rounded-md border border-gray-300 focus:outline-none focus:border-blue-600"
+                  />
+                </div>
+                <div className="flex flex-col space-y-2">
+                  <label htmlFor="email" className="text-lg">
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="Email Address"
+                    className="px-6 py-3.5 rounded-md border border-gray-300 focus:outline-none focus:border-blue-600"
+                  />
+                </div>
+                <div className="flex flex-col space-y-2">
+                  <label htmlFor="subject" className="text-lg">
+                    Subject
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Subject"
+                    className="px-6 py-3.5 rounded-md border border-gray-300 focus:outline-none focus:border-blue-600"
+                  />
+                </div>
+                <div className="flex flex-col space-y-2">
+                  <label htmlFor="fname" className="text-lg">
+                    Message (Optional)
+                  </label>
+                  <textarea
+                    name="message"
+                    id=""
+                    cols="30"
+                    rows="7"
+                    placeholder="Your Message"
+                    className="px-6 py-3.5 rounded-md border border-gray-300 focus:outline-none focus:border-blue-600"></textarea>
+                </div>
+                {/* CTA */}
+                <button className="py-4 bg-blue-600 text-white font-bold rounded-md text-xl">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </section>

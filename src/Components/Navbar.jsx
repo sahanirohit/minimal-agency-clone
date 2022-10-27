@@ -13,7 +13,7 @@ function Navbar() {
     });
   });
   return (
-    <div className={`${nav ? "h-16" : "h-20"} relative z-50 duration-200 `}>
+    <div className={`${nav ? "h-16" : "h-20"} relative z-40 duration-200 `}>
       <div
         className={`${
           nav ? "h-16 fixed top-0" : "h-20"
