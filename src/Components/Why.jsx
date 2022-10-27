@@ -23,7 +23,7 @@ function Why() {
                 <i className={item.icon}></i>
               </div>
               <div className="space-y-4">
-                <h2 className="text-3xl font-semibold">{item.title}</h2>
+                <h2 className="text-2xl font-semibold">{item.title}</h2>
                 <p className="text-xl text-gray-600 dark:text-gray-300">
                   {item.content}
                 </p>

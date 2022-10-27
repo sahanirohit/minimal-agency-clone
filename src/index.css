@@ -15,4 +15,60 @@
   .active {
     @apply text-blue-600;
   }
+  .nav-link {
+    @apply relative before:absolute before:w-0 hover:before:w-full before:duration-200 before:h-[1px] before:bg-gray-800 before:left-0 before:bottom-0;
+  }
+  .social-link {
+    @apply cursor-pointer duration-200 hover:-translate-y-2 p-2;
+  }
+}
+
+.bg {
+  background-image: url("./assets/images/bg.png");
+}
+.about-us {
+  background-image: url("./assets/images/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.cta {
+  background-image: url("./assets/images/pattern.png");
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
 }
