@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 import { WhyData } from "./data";
 
@@ -13,7 +13,7 @@ function Why() {
           that unleash new value and revolutionize organizations.
         </p>
       </div>
-      <div className="grid grid-cols-2 gap-8">
+      <div className="grid sm:grid-cols-2 gap-8">
         {WhyData.map((item, index) => {
           return (
             <div
@@ -23,8 +23,10 @@ function Why() {
                 <i className={item.icon}></i>
               </div>
               <div className="space-y-4">
-                <h2 className="text-2xl font-semibold">{item.title}</h2>
-                <p className="text-xl text-gray-600 dark:text-gray-300">
+                <h2 className="sm:text-2xl text-xl font-semibold">
+                  {item.title}
+                </h2>
+                <p className="sm:text-xl text-sm font-medium text-gray-600 dark:text-gray-300">
                   {item.content}
                 </p>
               </div>
@@ -36,4 +38,4 @@ function Why() {
   );
 }
 
-export default Why;
+export default memo(Why);

@@ -1,12 +1,12 @@
-import React from "react";
+import React, { memo } from "react";
 
 import { Logo } from "./data";
 
 function Footer() {
   return (
     <footer className="lg:px-48 px-6">
-      <div className="flex py-20 gap-8">
-        <div className="basis-1/3 space-y-4">
+      <div className="grid sm:grid-cols-2 md:grid-cols-5 py-20 gap-8">
+        <div className="md:col-span-2 space-y-4">
           <img src={Logo} alt="" className="" />
           <p className="">
             We assist companies in developing innovative digital goods and
@@ -22,8 +22,8 @@ function Footer() {
           </div>
         </div>
         <div className="text-xl space-y-6 flex-1">
-          <h2 className=" font-semibold">Company</h2>
-          <ul className="space-y-6">
+          <h2 className="font-bold">Company</h2>
+          <ul className="text-lg space-y-6">
             <li className="">Home</li>
             <li className="">About</li>
             <li className="">Services</li>
@@ -31,8 +31,8 @@ function Footer() {
           </ul>
         </div>
         <div className="text-xl space-y-6 flex-1">
-          <h2 className=" font-semibold">Services</h2>
-          <ul className="space-y-6">
+          <h2 className="font-bold">Services</h2>
+          <ul className="text-lg space-y-6">
             <li className="">Web Design</li>
             <li className="">Marketing & SEO</li>
             <li className="">Branding</li>
@@ -41,7 +41,7 @@ function Footer() {
           </ul>
         </div>
         <div className="text-xl space-y-3 flex-1">
-          <h2 className=" font-semibold">Socials</h2>
+          <h2 className="font-bold">Socials</h2>
           <div className="space-x-4">
             <i className="cursor-pointer duration-200 hover:-translate-y-2 fa-brands fa-facebook text-blue-600"></i>
             <i className="cursor-pointer duration-200 hover:-translate-y-2 fa-brands fa-twitter text-sky-500"></i>
@@ -50,8 +50,8 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-between py-8 relative before:absolute before:w-full before:h-[1px] before:bg-gray-300 before:top-0">
-        <div className="">
+      <div className="flex sm:flex-row flex-col space-y-4 sm:space-y-0 items-center justify-between py-8 relative before:absolute before:w-full before:h-[1px] before:bg-gray-300 before:top-0">
+        <div className="text-center sm:text-left">
           <p className="text-gray-400">
             Copyright &copy; 2022 Minimal Agency Clone - Powered by{" "}
             <strong className="hover:text-blue-600 cursor-pointer text-gray-600">
@@ -70,4 +70,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default memo(Footer);

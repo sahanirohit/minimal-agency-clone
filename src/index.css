@@ -26,12 +26,6 @@
 .bg {
   background-image: url("./assets/images/bg.png");
 }
-.about-us {
-  background-image: url("./assets/images/hero.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
 .cta {
   background-image: url("./assets/images/pattern.png");
 }

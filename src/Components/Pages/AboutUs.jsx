@@ -1,10 +1,17 @@
-import React from "react";
+import React, { memo } from "react";
+
+import heroImage from "../../assets/images/hero.jpg";
 
 function AboutUs(props) {
   return (
-    <section className="lg:px-48 w-full h-full relative about-us px-6 py-20">
+    <section className="lg:px-48 w-full h-full relative px-6 py-20">
+      <img
+        src={heroImage}
+        alt=""
+        className="absolute w-full h-full inset-0 object-cover"
+      />
       <div className="py-16 z-30 relative">
-        <h1 className="text-6xl font-bold text-center text-white">
+        <h1 className="lg:text-6xl md:text-5xl text-4xl duration-300 font-bold text-center text-white">
           {props.title}
         </h1>
       </div>
@@ -13,4 +20,4 @@ function AboutUs(props) {
   );
 }
 
-export default AboutUs;
+export default memo(AboutUs);

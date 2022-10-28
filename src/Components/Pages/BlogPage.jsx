@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Link } from "react-router-dom";
 
 import { blogData } from "../data";
@@ -6,8 +6,8 @@ import { blogData } from "../data";
 function BlogPage() {
   return (
     <section className="lg:px-48 px-6 py-20">
-      <div className="grid gap-24 grid-cols-3">
-        <div className="col-span-2">
+      <div className="grid gap-24 grid-cols-1 lg:grid-cols-3">
+        <div className="lg:col-span-2">
           {blogData.map((item, index) => {
             return (
               <div className="" key={index}>
@@ -115,4 +115,4 @@ function BlogPage() {
   );
 }
 
-export default BlogPage;
+export default memo(BlogPage);

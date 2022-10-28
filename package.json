@@ -1,5 +1,6 @@
 {
-  "name": "minimal-agency-clone",
+  "name": "minimal-agency",
+  "homepage": "https://rohitsahani.in/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

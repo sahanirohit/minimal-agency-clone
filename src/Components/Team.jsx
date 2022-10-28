@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 import { teamData } from "./data";
 
@@ -13,7 +13,7 @@ function Team() {
           to get you there.
         </p>
       </div>
-      <div className="grid grid-cols-4 gap-6 pt-16">
+      <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 pt-16">
         {teamData.map((item, index) => {
           return (
             <div
@@ -49,4 +49,4 @@ function Team() {
   );
 }
 
-export default Team;
+export default memo(Team);

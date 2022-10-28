@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 import { blogData } from "./data";
 
@@ -19,16 +19,16 @@ function Blog() {
         {blogData.map((item, index) => {
           return (
             <div
-              className=" bg-blue-100/80 flex w-full h-full space-x-4 rounded-md"
+              className=" bg-blue-100/80 flex sm:flex-row flex-col w-full h-full space-x-4 rounded-md"
               key={index}>
-              <div className="w-80 h-full">
+              <div className="sm:w-80 w-full h-80 sm:h-full">
                 <img
                   src={item.img}
                   alt=""
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="flex w-full flex-col py-4 justify-center space-y-2">
+              <div className="flex flex-col py-4 justify-center space-y-2">
                 <h2 className=" text-lg text-blue-600">{item.industry}</h2>
                 <h1 className=" text-2xl">{item.title}</h1>
                 <h2 className=" text-lg text-blue-600">{item.date}</h2>
@@ -47,4 +47,4 @@ function Blog() {
   );
 }
 
-export default Blog;
+export default memo(Blog);

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 
 function Top() {
   const [search, setSearch] = useState(false);
@@ -23,11 +23,11 @@ function Top() {
 
   return (
     <div
-      className={`lg:px-48 px-6 py-4 dark:bg-gray-900 dark:text-gray-100 ${
+      className={`lg:px-48 px-6 py-4 dark:bg-gray-900 hidden sm:block dark:text-gray-100 ${
         top === true && search === false ? "hidden" : ""
       }`}>
-      <div className="flex items-center justify-between">
-        <div className="flex space-x-6 text-sm">
+      <div className="flex sm:flex-row flex-col space-y-6 sm:space-y-0 items-center justify-between">
+        <div className="flex sm:flex-row flex-col items-center space-y-4 sm:space-y-0 sm:space-x-6 text-sm">
           <div className="flex space-x-2 items-center">
             <i className="fa-solid fa-envelope"></i>
             <span className="">email@companyname.com</span>
@@ -73,4 +73,4 @@ function Top() {
   );
 }
 
-export default Top;
+export default memo(Top);
